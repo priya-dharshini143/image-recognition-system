@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionAI — Image Recognition</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="brand">
+      <span class="brand-icon">◈</span>
+      <span class="brand-name">VisionAI</span>
+    </div>
+    <span class="brand-tag">Powered by MobileNetV2 · ImageNet 1000 classes</span>
+  </header>
+
+  <!-- ── HERO ── -->
+  <main>
+    <section class="hero">
+      <h1>What's in<br><em>your image?</em></h1>
+      <p class="sub">Upload any photo and our neural network identifies objects in real time — with confidence scores for the top five predictions.</p>
+    </section>
+
+    <!-- ── UPLOAD CARD ── -->
+    <section class="card upload-card" id="uploadCard">
+      <div class="drop-zone" id="dropZone">
+        <input type="file" id="fileInput" accept="image/*" hidden />
+        <div class="drop-inner" id="dropInner">
+          <div class="drop-icon">⬆</div>
+          <p class="drop-label">Drop an image here</p>
+          <p class="drop-hint">or <button class="link-btn" onclick="document.getElementById('fileInput').click()">browse files</button></p>
+          <p class="drop-formats">PNG · JPG · GIF · BMP · WEBP — up to 16 MB</p>
+        </div>
+        <img id="preview" class="preview hidden" alt="Preview" />
+      </div>
+
+      <button class="btn-analyse" id="analyseBtn" disabled>
+        <span id="btnLabel">Analyse Image</span>
+        <span id="btnSpinner" class="spinner hidden"></span>
+      </button>
+    </section>
+
+    <!-- ── RESULTS ── -->
+    <section class="card results-card hidden" id="resultsCard">
+      <h2 class="results-title">Predictions</h2>
+      <div id="resultsList" class="results-list"></div>
+      <button class="btn-reset" id="resetBtn">Try another image</button>
+    </section>
+
+    <!-- ── ERROR ── -->
+    <div class="error-banner hidden" id="errorBanner"></div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>VisionAI · MobileNetV2 fine-tuned on ImageNet · Built with Flask &amp; TensorFlow</span>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
