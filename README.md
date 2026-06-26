@@ -1,26 +1,26 @@
-# 🔍 VisionAI — Image Recognition System
+# VisionAI — Image Recognition System
 
 A web application that lets users upload images and receive **real-time object predictions** using a pre-trained **MobileNetV2** neural network (ImageNet — 1000 classes).
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![Flask](https://img.shields.io/badge/Flask-3.0-black?logo=flask)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange?logo=tensorflow)
-![License](https://img.shields.io/badge/License-MIT-green)
+![Python]
+![Flask]
+![TensorFlow]
+![License]
 
 ---
 
-## ✨ Features
+## Features
 
-- 📤 Drag-and-drop or click-to-upload interface
-- ⚡ Real-time predictions with confidence scores
-- 📊 Animated progress bars for top-5 results
-- 🖼️ Live image preview before analysis
-- 🌐 Powered by MobileNetV2 pretrained on ImageNet (1000 classes)
-- 📱 Fully responsive dark UI
+-  Drag-and-drop or click-to-upload interface
+-  Real-time predictions with confidence scores
+-  Animated progress bars for top-5 results
+-  Live image preview before analysis
+-  Powered by MobileNetV2 pretrained on ImageNet (1000 classes)
+-  Fully responsive dark UI
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer     | Technology                        |
 |-----------|-----------------------------------|
@@ -32,7 +32,7 @@ A web application that lets users upload images and receive **real-time object p
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -57,7 +57,7 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 
-> ⚠️ TensorFlow is ~500 MB. The first run also downloads MobileNetV2 weights (~14 MB).
+>  TensorFlow is ~500 MB. The first run also downloads MobileNetV2 weights (~14 MB).
 
 ### 4. Run the development server
 
@@ -75,7 +75,7 @@ gunicorn -w 2 -b 0.0.0.0:5000 app:app
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 image-recognition-system/
@@ -94,7 +94,7 @@ image-recognition-system/
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 ### `POST /predict`
 
@@ -124,7 +124,7 @@ Returns `{"status": "ok"}` — useful for uptime checks.
 
 ---
 
-## 📦 Deploying to Render (free tier)
+## Deploying to Render (free tier)
 
 1. Push this repo to GitHub
 2. Go to [render.com](https://render.com) → **New Web Service**
@@ -136,6 +136,5 @@ Returns `{"status": "ok"}` — useful for uptime checks.
 
 ---
 
-## 📜 License
-
+##  License
 MIT © 2024 — free to use, modify, and distribute.
